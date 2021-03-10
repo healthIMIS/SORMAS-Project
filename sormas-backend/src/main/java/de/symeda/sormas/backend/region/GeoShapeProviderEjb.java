@@ -35,6 +35,7 @@ import org.geotools.data.shapefile.ShapefileDataStore;
 import org.geotools.data.simple.SimpleFeatureIterator;
 import org.geotools.data.store.ContentFeatureCollection;
 import org.geotools.data.store.ContentFeatureSource;
+import org.geotools.feature.simple.SimpleFeatureImpl;
 import org.geotools.geometry.jts.JTSFactoryFinder;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.GeometryFactory;
@@ -185,10 +186,9 @@ public class GeoShapeProviderEjb implements GeoShapeProvider {
 		regionMultiPolygons.clear();
 
 		// load shapefile
-		String filepath = "shapefiles/" + countryName + "/regions.shp";
-		URL filepathUrl = getClass().getClassLoader().getResource(filepath);
-		if (filepathUrl == null || !filepath.endsWith(".shp")) {
-			logger.warn("Invalid shapefile filepath: " + filepath);
+		URL filepathUrl = loadShapefile(countryName, "regions.shp");
+
+		if (filepathUrl == null) {
 			return;
 		}
 
@@ -200,16 +200,26 @@ public class GeoShapeProviderEjb implements GeoShapeProvider {
 			List<RegionReferenceDto> regions = regionFacade.getAllActiveAsReference();
 
 			SimpleFeatureIterator iterator = featureCollection.features();
+
 			while (iterator.hasNext()) {
 				SimpleFeature feature = iterator.next();
-				GeometryAttribute defaultGeometryProperty = feature.getDefaultGeometryProperty();
-				MultiPolygon multiPolygon = (MultiPolygon) defaultGeometryProperty.getValue();
+				MultiPolygon multiPolygon = (MultiPolygon) feature.getDefaultGeometryProperty().getValue();
 
-				// TODO find better solution to column name defintion
-				String shapeRegionName = (String) feature.getAttribute("StateName");
-				if (shapeRegionName == null) {
-					shapeRegionName = (String) feature.getAttribute("REGION");
+				String shapeRegionName = null;
+				// all these attributes can hold the region name
+				List<String> regionAttributes = Arrays.asList("StateName", "REGION", "GEN");
+				for (String attr : regionAttributes) {
+					shapeRegionName = (String) feature.getAttribute(attr);
+					if (shapeRegionName != null) {
+						break;
+					}
 				}
+				if (shapeRegionName == null) {
+					// we did not find a name for the current region shape
+					logger.error("No region name for the current region shape could be found");
+					continue;
+				}
+
 				shapeRegionName = shapeRegionName.replaceAll("\\W", "").toLowerCase();
 				String finalShapeRegionName = shapeRegionName;
 				Optional<RegionReferenceDto> regionResult = regions.stream().filter(r -> {
@@ -270,14 +280,9 @@ public class GeoShapeProviderEjb implements GeoShapeProvider {
 
 		districtShapes.clear();
 		districtMultiPolygons.clear();
-
-		// load shapefile
-		String filepath = "shapefiles/" + countryName + "/districts.shp";
-		URL filepathUrl = getClass().getClassLoader().getResource(filepath);
-		if (filepathUrl == null || !filepath.endsWith(".shp")) {
-			logger.warn("Invalid shapefile filepath: " + filepath);
+		URL filepathUrl = loadShapefile(countryName, "districts.shp");
+		if (filepathUrl == null)
 			return;
-		}
 
 		try {
 			ShapefileDataStore dataStore = new ShapefileDataStore(filepathUrl);
@@ -296,12 +301,24 @@ public class GeoShapeProviderEjb implements GeoShapeProvider {
 					continue;
 				}
 
-				String shapeDistrictName = (String) feature.getAttribute("LGAName");
-				if (shapeDistrictName == null) {
-					shapeDistrictName = (String) feature.getAttribute("DISTRICT");
+				String shapeDistrictName = null;
+				// all these attributes can hold the region name
+				List<String> regionAttributes = Arrays.asList("LGAName", "DISTRICT", "GEN");
+				for (String attr : regionAttributes) {
+					shapeDistrictName = (String) feature.getAttribute(attr);
+					if (shapeDistrictName != null) {
+						break;
+					}
 				}
+				if (shapeDistrictName == null) {
+					// we did not find a name for the current region shape
+					logger.error("No district name for the current district shape could be found");
+					continue;
+				}
+
 				shapeDistrictName = shapeDistrictName.replaceAll("\\W", "").toLowerCase();
 				String finalShapeDistrictName = shapeDistrictName;
+
 				Optional<DistrictReferenceDto> districtResult = districts.stream().filter(r -> {
 					String districtName = r.getCaption().replaceAll("\\W", "").toLowerCase();
 					return districtName.contains(finalShapeDistrictName)
@@ -354,6 +371,16 @@ public class GeoShapeProviderEjb implements GeoShapeProvider {
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	private URL loadShapefile(String countryName, String filename) {
+		String filepath = "shapefiles/" + countryName + "/" + filename;
+		URL filepathUrl = getClass().getClassLoader().getResource(filepath);
+		if (filepathUrl == null || !filepath.endsWith(".shp")) {
+			logger.warn("Invalid shapefile filepath: " + filepath);
+			return null;
+		}
+		return filepathUrl;
 	}
 
 	private void buildCountryShape() {
