@@ -8,9 +8,9 @@ env:
 
 on:
   push:
-    branches: [ development, master ]
-  pull_request:
-    branches: [ development ]
+    branches: [ development, master, openapi-canary  ]
+  #pull_request:
+  #  branches: [ development ]
 
 jobs:
   test:
@@ -38,3 +38,15 @@ jobs:
         # FIXME(@JonasCir) see https://github.com/hzi-braunschweig/SORMAS-Project/issues/3730#issuecomment-745165678
         working-directory: ./sormas-base
         run: mvn verify -B -ntp
+
+      - name: commit openAPI spec
+        if: github.event_name == 'push' && github.ref == 'refs/heads/openapi-canary'
+        run: |
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+
+            mkdir openapi/
+            cp sormas-rest/target/swagger.json openapi
+            git add openapi
+            git commit -m "Update openAPI spec files"
+            git push
