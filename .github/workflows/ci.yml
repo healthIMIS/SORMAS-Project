@@ -47,6 +47,7 @@ jobs:
 
             mkdir openapi/
             cp sormas-rest/target/swagger.json openapi
+            git status
             git add openapi
             git commit -m "Update openAPI spec files"
             git push
