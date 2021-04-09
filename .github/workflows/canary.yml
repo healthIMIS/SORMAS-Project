@@ -15,14 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Commit OpenAPI specification files
-        uses: actions/checkout@v2
-        if: github.event_name == 'push' && github.ref == 'development'
-        run: |
-          mkdir openapi
-          cp sormas-rest/target/swagger.yaml openapi
+      - uses: actions/checkout@v2
+      - run: |
+          date > generated.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add openapi
-          git commit -m "update openapi specification files"
+          git add .
+          git commit -m "generated"
           git push
