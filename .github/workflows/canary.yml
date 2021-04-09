@@ -11,12 +11,13 @@ on:
 
 jobs:
   test:
-    name: mvn verify
+    name: build/commit openAPI spec
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - run: |
+          git status
           date > generated.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
