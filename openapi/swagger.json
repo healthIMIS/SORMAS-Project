@@ -5492,8 +5492,8 @@
           },
           "epidNumber" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-countries-except" : [ "de", "ch" ]
+            "x-sormas-countries-except" : [ "de", "ch" ],
+            "x-sormas-outbreaks" : true
           },
           "reportDate" : {
             "type" : "string",
@@ -5585,8 +5585,8 @@
           },
           "healthFacilityDetails" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-personal-data" : true
+            "x-sormas-personal-data" : true,
+            "x-sormas-outbreaks" : true
           },
           "pregnant" : {
             "$ref" : "#/components/schemas/YesNoUnknown"
@@ -5596,20 +5596,20 @@
           },
           "vaccinationDoses" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "CSM", "YELLOW_FEVER", "RABIES", "UNSPECIFIED_VHF", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "CSM", "YELLOW_FEVER", "RABIES", "UNSPECIFIED_VHF", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "firstVaccinationDate" : {
             "type" : "string",
             "format" : "date-time",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "lastVaccinationDate" : {
             "type" : "string",
             "format" : "date-time",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "vaccinationInfoSource" : {
             "$ref" : "#/components/schemas/VaccinationInfoSource"
@@ -5646,8 +5646,8 @@
           },
           "vaccine" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "POLIO", "RABIES", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "POLIO", "RABIES", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "smallpoxVaccinationScar" : {
             "$ref" : "#/components/schemas/YesNoUnknown"
@@ -7103,14 +7103,14 @@
           "lesionsAllOverBody" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsArms" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "ANTHRAX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsDeepProfound" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7118,33 +7118,33 @@
           "lesionsFace" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsGenitals" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsLegs" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsOnsetDate" : {
             "type" : "string",
             "format" : "date-time",
             "x-sormas-diseases" : [ "MONKEYPOX", "ANTHRAX" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsPalmsHands" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsResembleImg1" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7167,8 +7167,8 @@
           "lesionsSolesFeet" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lesionsThatItch" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7176,8 +7176,8 @@
           "lesionsThorax" : {
             "type" : "boolean",
             "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MONKEYPOX", "POLIO", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "lesions"
+            "x-sormas-depends-on" : "lesions",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "lossSkinTurgor" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7236,17 +7236,17 @@
           "otherHemorrhagicSymptomsText" : {
             "type" : "string",
             "x-sormas-diseases" : [ "AFP", "EVD", "GUINEA_WORM", "LASSA", "PLAGUE", "POLIO", "UNSPECIFIED_VHF", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de", "ch" ],
-            "x-sormas-depends-on" : "otherHemorrhagicSymptoms"
+            "x-sormas-depends-on" : "otherHemorrhagicSymptoms",
+            "x-sormas-countries-except" : [ "de", "ch" ]
           },
           "otherNonHemorrhagicSymptoms" : {
             "$ref" : "#/components/schemas/SymptomState"
           },
           "otherNonHemorrhagicSymptomsText" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
             "x-sormas-diseases" : [ "AFP", "EVD", "GUINEA_WORM", "LASSA", "NEW_INFLUENZA", "CSM", "CHOLERA", "MEASLES", "DENGUE", "MONKEYPOX", "PLAGUE", "POLIO", "UNSPECIFIED_VHF", "CONGENITAL_RUBELLA", "CORONAVIRUS", "UNDEFINED", "OTHER" ],
-            "x-sormas-depends-on" : "otherNonHemorrhagicSymptoms"
+            "x-sormas-depends-on" : "otherNonHemorrhagicSymptoms",
+            "x-sormas-outbreaks" : true
           },
           "otitisMedia" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7317,8 +7317,8 @@
           "temperature" : {
             "type" : "number",
             "format" : "float",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "EVD", "GUINEA_WORM", "LASSA", "NEW_INFLUENZA", "CSM", "CHOLERA", "MEASLES", "YELLOW_FEVER", "DENGUE", "MONKEYPOX", "PLAGUE", "UNSPECIFIED_VHF", "CONGENITAL_RUBELLA", "POLIO", "RABIES", "CORONAVIRUS", "UNDEFINED", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "EVD", "GUINEA_WORM", "LASSA", "NEW_INFLUENZA", "CSM", "CHOLERA", "MEASLES", "YELLOW_FEVER", "DENGUE", "MONKEYPOX", "PLAGUE", "UNSPECIFIED_VHF", "CONGENITAL_RUBELLA", "POLIO", "RABIES", "CORONAVIRUS", "UNDEFINED", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "temperatureSource" : {
             "$ref" : "#/components/schemas/TemperatureSource"
@@ -7509,8 +7509,8 @@
           "otherComplicationsText" : {
             "type" : "string",
             "x-sormas-diseases" : [ "AFP", "EVD", "GUINEA_WORM", "LASSA", "NEW_INFLUENZA", "CSM", "CHOLERA", "MEASLES", "POLIO", "UNSPECIFIED_VHF", "GUINEA_WORM", "RABIES", "YELLOW_FEVER", "DENGUE", "PLAGUE", "ANTHRAX", "CORONAVIRUS", "UNDEFINED", "OTHER" ],
-            "x-sormas-countries-except" : [ "de" ],
-            "x-sormas-depends-on" : "otherComplications"
+            "x-sormas-depends-on" : "otherComplications",
+            "x-sormas-countries-except" : [ "de" ]
           },
           "seizures" : {
             "$ref" : "#/components/schemas/SymptomState"
@@ -7740,13 +7740,13 @@
           },
           "firstName" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-personal-data" : true
+            "x-sormas-personal-data" : true,
+            "x-sormas-outbreaks" : true
           },
           "lastName" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-personal-data" : true
+            "x-sormas-personal-data" : true,
+            "x-sormas-outbreaks" : true
           },
           "salutation" : {
             "$ref" : "#/components/schemas/Salutation"
@@ -7787,8 +7787,8 @@
           "birthdateDD" : {
             "type" : "integer",
             "format" : "int32",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-personal-data" : true
+            "x-sormas-personal-data" : true,
+            "x-sormas-outbreaks" : true
           },
           "birthdateMM" : {
             "type" : "integer",
@@ -9206,20 +9206,20 @@
           },
           "vaccinationDoses" : {
             "type" : "string",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "CSM", "YELLOW_FEVER", "RABIES", "UNSPECIFIED_VHF", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "CSM", "YELLOW_FEVER", "RABIES", "UNSPECIFIED_VHF", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "firstVaccinationDate" : {
             "type" : "string",
             "format" : "date-time",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "lastVaccinationDate" : {
             "type" : "string",
             "format" : "date-time",
-            "x-sormas-outbreaks" : true,
-            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ]
+            "x-sormas-diseases" : [ "AFP", "GUINEA_WORM", "MEASLES", "POLIO", "YELLOW_FEVER", "CSM", "MONKEYPOX", "UNSPECIFIED_VHF", "RABIES", "ANTHRAX", "CORONAVIRUS", "OTHER" ],
+            "x-sormas-outbreaks" : true
           },
           "vaccinationInfoSource" : {
             "$ref" : "#/components/schemas/VaccinationInfoSource"
