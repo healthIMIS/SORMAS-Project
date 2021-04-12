@@ -37,7 +37,7 @@ jobs:
       - name: Run mvn verify
         # FIXME(@JonasCir) see https://github.com/hzi-braunschweig/SORMAS-Project/issues/3730#issuecomment-745165678
         working-directory: ./sormas-base
-        run: mvn verify -B -ntp
+        run: mvn verify -B -ntp -DskipTests
 
       - name: Commit openAPI spec
         if: github.event_name == 'push' && github.ref == 'refs/heads/development'
@@ -47,6 +47,7 @@ jobs:
 
             rm -rf openapi
             mkdir openapi/
+            ls sormas-rest/target/
             cp sormas-rest/target/swagger.* sormas-rest/target/external_journal_API.* openapi
 
             git add openapi
