@@ -1,0 +1,922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Custimization - SORMAS Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#customizing-a-sormas-server" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SORMAS Project" class="md-header__button md-logo" aria-label="SORMAS Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SORMAS Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Custimization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/hzi-braunschweig/SORMAS-Project/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hzi-braunschweig/SORMAS-Project
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SORMAS Project" class="md-nav__button md-logo" aria-label="SORMAS Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    SORMAS Project
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hzi-braunschweig/SORMAS-Project/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hzi-braunschweig/SORMAS-Project
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://sormas.org" class="md-nav__link">
+        Offical Website
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING/" class="md-nav__link">
+        Contributing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEMO_APP/" class="md-nav__link">
+        Demo App
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-rest/" class="md-nav__link">
+        REST
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEVELOPMENT_ENVIRONMENT/" class="md-nav__link">
+        Development Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-cargoserver/" class="md-nav__link">
+        Cargo Server
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-base/doc/keycloak/" class="md-nav__link">
+        Keycloak
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-keycloak-service-provider/" class="md-nav__link">
+        Keycloak Service Provider
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I18N/" class="md-nav__link">
+        I18n
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SECURITY/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Custimization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Custimization
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    Content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-configuration" class="md-nav__link">
+    Server Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-login-page" class="md-nav__link">
+    Custom login page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-download-files-in-about-section" class="md-nav__link">
+    Custom download files in about section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-infrastructure-data" class="md-nav__link">
+    Importing Infrastructure Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Importing Infrastructure Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archive" class="md-nav__link">
+    Archive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disease-configuration" class="md-nav__link">
+    Disease Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-configuration" class="md-nav__link">
+    Feature Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    Proxy Settings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_DEV_SETUP/" class="md-nav__link">
+        Development Setup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_SETUP/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_UPDATE/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOP_DISEASES/" class="md-nav__link">
+        Diseases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADDING_LICENSE/" class="md-nav__link">
+        Licensing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3RD_PARTY_ACK/" class="md-nav__link">
+        Acknowledgements
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    Content
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-configuration" class="md-nav__link">
+    Server Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-login-page" class="md-nav__link">
+    Custom login page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-download-files-in-about-section" class="md-nav__link">
+    Custom download files in about section
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-infrastructure-data" class="md-nav__link">
+    Importing Infrastructure Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Importing Infrastructure Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    Import
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archive" class="md-nav__link">
+    Archive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disease-configuration" class="md-nav__link">
+    Disease Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-configuration" class="md-nav__link">
+    Feature Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    Proxy Settings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/hzi-braunschweig/SORMAS-Project/edit/master/docs/SERVER_CUSTOMIZATION.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="customizing-a-sormas-server">Customizing a SORMAS Server</h1>
+<h2 id="content">Content</h2>
+<ul>
+<li><a href="#customizing-a-sormas-server">Customizing a SORMAS Server</a></li>
+<li><a href="#content">Content</a></li>
+<li><a href="#server-configuration">Server Configuration</a><ul>
+<li><a href="#custom-login-page">Custom login page</a></li>
+<li><a href="#custom-download-files-in-about-section">Custom download files in about section</a></li>
+</ul>
+</li>
+<li><a href="#importing-infrastructure-data">Importing Infrastructure Data</a><ul>
+<li><a href="#import">Import</a></li>
+<li><a href="#archive">Archive</a></li>
+</ul>
+</li>
+<li><a href="#disease-configuration">Disease Configuration</a></li>
+<li><a href="#feature-configuration">Feature Configuration</a></li>
+<li><a href="#proxy-settings">Proxy Settings</a></li>
+</ul>
+<h2 id="server-configuration">Server Configuration</h2>
+<p>After installing a SORMAS servers, you can customize various configurations that define how SORMAS operates and is set up. This is done in the <strong>sormas.properties</strong> file that you can find in your domain folder. This file contains explanations for every property and also a default value in case you want to revert any changes that you've made.</p>
+<p>Most of these properties are commented (indicated by a <em>#</em> in front of their name and value) because the default should work for most servers.
+If you want to change these properties, you can remove the <em>#</em> and specify a valid value. We strongly suggest to add values to the properties that are not commented by default because these are specific to your server (e.g. the default locale/language, the center of the country or region you're using SORMAS in and the URL that leads to the mobile .apk file).</p>
+<p>Please note that this file contains all the properties that existed in the SORMAS version that you initially installed on your server.
+We strongly suggest to read the release notes of new versions in order to keep yourself updated about new properties or whether the expected values of existing ones have changed. In any of these cases, you need to manually update the properties file and either insert the new property or change the existing value to one that is compatible. The release notes will give you instructions on how to do this.</p>
+<p>The following properties are currently configurable:</p>
+<ul>
+<li><strong>Default locale</strong> <code>country.locale</code>: This is the locale your server is using as long as the user has not overwritten it in their settings. It impacts both the language that SORMAS is displayed in as well as e.g. date formats.</li>
+<li><strong>EPID prefix</strong> <code>country.epidprefix</code>: SORMAS automatically generates EPID numbers for new cases. This is the prefix your country is using for all of these numbers. Most of the time it will be some sort of country code and should be three characters long.</li>
+<li><strong>Country name</strong> <code>country.name</code>: Name of the country to pre-fill the country fields for locations and to activate the region, district, etc. fields when this country is selected. Needs to match the name of the country in the database.</li>
+<li><strong>Country center/zoom</strong> <code>country.center.latitude</code>, <code>country.center.longitude</code> and <code>map.zoom</code>: These are the geo coordinates of the geographical center of the country or region you're using SORMAS in. Used to set the initial location of the maps used in dashboards and statistics.</li>
+<li><strong>App URL</strong> <code>app.url</code>: The directory on your server where the mobile .apk file is stored that is used to automatically update the Android app after a new release. You should be able to copy the example given in the properties file and only have to replace the SERVER-NAME placeholder.</li>
+<li><strong>File paths</strong> <code>documents.path</code>, <code>temp.path</code>, <code>generated.path</code> and <code>custom.path</code>: The folders that SORMAS stores files in, either temporarily during case export or permanently like import templates or documents.
+  Files in temp.path are automatically deleted at midnight. Files in custom.path can be used to customize the login page, e.g. to provide default logins for demo servers or add additional contributors to the right sidebar.</li>
+<li><strong>Automatic case classification</strong> <code>feature.automaticcaseclassification</code>: Determines whether SORMAS automatically classifies cases based on a number of criteria that are defined in the code.</li>
+<li><strong>Email settings</strong> <code>email.sender.address</code> and <code>email.sender.name</code>: The email address and sender name that should be used when SORMAS is sending out emails, e.g. to notify users about specific events.</li>
+<li><strong>SMS settings</strong> <code>sms.sender.name, sms.auth.key and sms.auth.secret</code>: Besides emails, SORMAS also supports sending automatic SMS to users at the same time (e.g. when a case has been classified as confirmed).
+  The SMS provider SORMAS is using is the Vonage SMS API (<a href="https://www.vonage.com/communications-apis/sms/">https://www.vonage.com/communications-apis/sms/</a>). If you have an account there, you can use your key and secret here to enable sending out SMS. Leaving these properties empty will disable this feature.</li>
+<li><strong>CSV separator</strong> <code>csv.separator</code>: The separator that CSV files should use to separate columns. This is depending on your server locale. Most systems should be fine using the default (<em>,</em>), but e.g. German systems should be set to use <em>;</em>.</li>
+<li><strong>Name similarity threshold</strong> <code>namesimilaritythreshold</code>: This is used when comparing cases or contacts to find duplicates in the system, either in retrospection or during creation or import.
+  The higher the value, the more restrictive the algorithm, i.e. less potential duplicates will be found. It is suggested to play around with this setting to see which value works for your country and language.</li>
+<li><strong>Dev mode</strong> <code>devmode</code>: Enabling developer mode will give you access to a tab in the Configuration menu that allows admins to create dummy cases and contacts to quickly fill the database.
+  This is only meant to be used on development or demo systems and should be left disabled for production servers.</li>
+<li><strong>Infrastructure sync threshold</strong> <code>infrastructuresyncthreshold</code>: Synchronizing infrastructure data to mobile apps (e.g. regions or health facilities) is done in chunks to avoid connection timeouts.
+  If you expect your users to have very bad internet connection, lowering this threshold could make it easier for them to synchronize this data.</li>
+<li><strong>Archiving thresholds</strong> <code>daysAfterCaseGetsArchived</code> and <code>daysAfterEventGetsArchived</code>: The number of days without any changes after which cases/events are automatically archived (i.e. they will no longer be displayed in the normal directories, but still count towards statistics or counts on the dashboard and can still be viewed by users with the respective user right).
+  If set to 0, automatic archiving is disabled.</li>
+<li><strong>Rscript executable</strong> <code>rscript.executable</code>: The location of the Rscript executable. If you've installed Rscript on your server and specify the path here (the default should work for Linux systems
+  as long as you've used the default install path), network diagrams for transmission chains will be shown in the web app.</li>
+<li><strong>Symptom journal interface</strong>: Properties used to connect to an external symptom journal service. <code>interface.symptomjournal.url</code> is the URL to the website that SORMAS should connect to;
+  <code>interface.symptomjournal.authurl</code> is the URL used to authenticate SORMAS at the external service; <code>interface.symptomjournal.clientid</code> and <code>interface.symptomjournal.secret</code> are the credentials used for the
+  authentication process. A default user can be created automatically at startup by using <code>interface.symptomjournal.defaultuser.username</code> and <code>interface.symptomjournal.defaultuser.password</code>. This user can be used
+  by the Symptom Journal system to connect to SORMAS.</li>
+<li><strong>Patient diary interface</strong> Properties used to connect to an external patient diary service. <code>interface.patientdiary.url</code> is the URL to the website that SORMAS should connect to;
+  <code>interface.patientdiary.probandsurl</code> is the URL to the website that SORMAS can send notifications; <code>interface.patientdiary.authurl</code> is the URL trough which SORMAS can obtain an authorization to the external patient
+  diary; <code>interface.patientdiary.email</code> and <code>interface.patientdiary.password</code> are the credentials used by SORMAS to authenticate in the external patient diary.
+  A default user can be created automatically at startup by using <code>interface.patientdiary.defaultuser.username</code> and <code>interface.patientdiary.defaultuser.password</code>.
+  This user can be used by the Patient Diary system to connect to SORMAS.</li>
+<li><strong>Custom branding</strong>: Properties used to apply a custom branding to SORMAS that overrides its name and default logo. Using these properties also alters the sidebar and adds another customizable area to it.
+  If you want to use this feature, set <code>custombranding</code> to true. <code>custombranding.name</code> is the name that you want to use, <code>custombranding.logo.path</code> is the path to the logo that should be used.</li>
+<li><strong>Geocoding</strong> Properties used to integrate an external geocoding service for obtaining the geo coordinates of addresses.</li>
+<li><code>geocodingServiceUrlTemplate</code> is the url for searching for address details, <code>${street}</code>, <code>${houseNumber}</code>, <code>${postalCode}</code>, and <code>${city}</code> placeholders will be replaced with the actual address fields when searching;</li>
+<li><code>geocodingLongitudeJsonPath</code> and <code>geocodingLatitudeJsonPath</code> are used to obtain the longitude and latitude of the address in the result of the geocoding service request</li>
+<li><strong>Authentication Provider</strong>: Allows the user to choose the way of authentication for SORMAS and all it's third party clients. Supported values <code>SORMAS</code> (default) and <code>KEYCLOAK</code></li>
+<li><strong>Authentication Provider User Sync At Startup</strong>: Enables async user sync when the system boots up. Since the User Sync is mainly needed for an initial sync only, it's recommended to
+  disable/remove this property once an initial sync has be performed. The User Sync will work similarly to the manual user sync:</li>
+<li>creates all the missing users in the External Authentication Provider</li>
+<li>updates all existing users in the External Authentication Provider</li>
+<li>keeps the user's password if the user doesn't exist in the External Authentication Provider</li>
+<li>will not override the user's password if the user already in the External Authentication Provider (matching done by username case insensitive)</li>
+<li>will only sync active users (inactive users are automatically synchronized when they are activated manually)</li>
+<li>is enabled trough a property in sormas.properties <code>authentication.provider.userSyncAtStartup</code> (by default is disabled)</li>
+</ul>
+<h3 id="custom-login-page">Custom login page</h3>
+<p>When setting up the server a custom file directory is created (most likely <code>/opt/sormas/custom</code>). You can adjust the <code>login*.html</code> files in that directory to customize the login page.</p>
+<h3 id="custom-download-files-in-about-section">Custom download files in about section</h3>
+<p>You can create a sub-folder <code>aboutfiles</code> in the custom directory mentioned above (e.g. <code>/opt/sormas/custom/aboutfiles</code>). Any file in that directory will be made available in the about section of the frontend.</p>
+<h2 id="importing-infrastructure-data">Importing Infrastructure Data</h2>
+<p>When you start a SORMAS server for the first time, some default infrastructure data is generated to ensure that the server is usable and the default users can be created. It is recommended (and, unless you're working on a demo server, necessary) to archive this default data and import the official infrastructure data of the country or part of the country that you intend to use SORMAS in instead.</p>
+<h3 id="import">Import</h3>
+<p>SORMAS by default splits infrastructure data into four categories. Starting from the highest administrative division, these are: <em>Regions</em>, <em>Districts</em>, <em>Communities</em>, and <em>Health Facilities</em>.
+In addition, <em>Points of Entry</em> represent places like harbors and airports where people are frequently entering the country, while <em>Laboratories</em> are technically health facilities that are specifically used for sample testing purposes.</p>
+<p>To import your data for one of these administrative divisions, log in as the default admin user and open the <strong>Configuration</strong> menu. Open any of the tabs for the infrastructure data you want to import and click on the <strong>Import</strong> button on the top right.
+You can download an import guide from within the popup window that will be opened, containing detailed instructions about the import process and the steps you need to go through in order to successfully import your data.</p>
+<p>Make sure that you always start with the highest administrative division when importing, i.e. regions, and work your way down to the lowest, because lower divisions typically contain references to higher divisions.</p>
+<h3 id="archive">Archive</h3>
+<p>After importing your infrastructure data, you need to archive the default data unless you want it to appear in your app.
+To do that, again open the <strong>Configuration</strong> menu and the tab for the infrastructure data you want to archive. You can use the text filter on top of the screen to type in the name of the default data, then click on the edit icon to the right, and in the popup window that opens up, click on <strong>Archive</strong> and confirm your choice.</p>
+<p>After archiving the default infrastructure data, you might want to edit the default users and assign them to administrative divisions that you've imported. To do so, go to the <strong>User</strong> menu and click on the edit icon beneath the user you want to re-assign.</p>
+<h2 id="disease-configuration">Disease Configuration</h2>
+<p>SORMAS supports a wide range of diseases, and not all of those might be relevant to any SORMAS instance or might be used in a different context. It is possible to adjust the following variables that define how the different diseases are handled:</p>
+<ul>
+<li>Whether the disease is <strong>active</strong>, i.e. it is used in this SORMAS instance</li>
+<li>Whether the disease is a <strong>primary</strong> disease, i.e. it is enabled for case surveillance; non-primary diseases can still be used for pathogen testing</li>
+<li>Whether the disease is <strong>case-based</strong>; if not, it is only enabled for aggregate case reporting</li>
+<li>Whether <strong>contact follow-up is enabled</strong></li>
+<li>The <strong>contact follow-up duration</strong></li>
+</ul>
+<p>Right now, changing these variables unfortunately is not possible from within the user interface, but requires <strong>direct database access</strong>. If you have this access, you can edit the entries in the <em>diseaseconfiguration</em> table according to your needs.</p>
+<p><strong>VERY IMPORTANT:</strong> Whenever you edit an entry in this table, you also need to manually set the <em>changedate</em> to the current date and time. This is required in order for the mobile app to synchronize the changes and use the edited disease configuration.</p>
+<h2 id="feature-configuration">Feature Configuration</h2>
+<p>Some of the features in SORMAS can be enabled or disabled to further customize the system. Right now, changing these variables unfortunately is not possible from within the user interface, but requires <strong>direct database access</strong>. If you have this access, you can edit the entries in the <em>featureconfiguration</em> table.
+There is one entry for every configurable feature in this table, and you can set the value of the <em>enabled</em> column to <em>true</em> to enable it and <em>false</em> to disable it. The <em>region</em>, <em>district</em>, <em>disease</em> and <em>enddate</em> columns are currently only applicable for the line listing feature and define the scope in which line listing is used.
+Line listing is configurable from within the UI and does not need to be manually edited in the database.</p>
+<p><strong>VERY IMPORTANT:</strong> Whenever you edit an entry in this table, you also need to manually set the <em>changedate</em> to the current date and time. This is required in order for the mobile app to synchronize the changes and use the edited feature configuration.</p>
+<p>The following features are currently configurable:</p>
+<ul>
+<li><strong>Case Surveillance</strong> <code>CASE_SURVEILANCE</code>: The core module of SORMAS which allows the creation and management of suspect or confirmed disease cases.</li>
+<li><strong>Contact Tracing</strong> <code>CONTACT_TRACING</code>: Management and follow-up of contacts of disease cases.</li>
+<li><strong>Sample Management</strong> <code>SAMPLES_LAB</code>: Management of samples for cases, contacts or event participants and the documentation of pathogen tests performed on these samples.</li>
+<li><strong>Event Surveillance</strong> <code>EVENT_SURVEILLANCE</code>: Creating and managing events and event participants to identify potential outbreaks or disease hotspots.</li>
+<li><strong>Aggregate Reporting</strong> <code>AGGREGATE_REPORTING</code>: Allows collecting case numbers for a number of additional diseases for which case-based surveillance is not used. Commonly referred to as mSers in African countries.</li>
+<li><strong>Weekly Reporting</strong> <code>WEEKLY_REPORTING</code>: Allows mobile users to confirm the number of cases they have collected on a weekly basis and web users to see an overview of whether or not mobile users have submitted their reports and how many cases they have reported.</li>
+<li><strong>Clinical Management</strong> <code>CLINICAL_MANAGEMENT</code>: Enables the clinical management module of cases that allow collecting prescriptions and treatments as well as doctor's visits in a clinical context.</li>
+<li><strong>National Case Sharing</strong> <code>NATIONAL_CASE_SHARING</code>: Allows users with the respective rights to make cases available to the whole country, i.e. other users will see these cases even if they don't belong to their jurisdiction.</li>
+<li><strong>Task Generation (Case Surveillance)</strong> <code>TASK_GENERATION_CASE_SURVEILLANCE</code>: Enables or disables the automatic generation of tasks associated with case surveillance, especially the <em>Case Investigation</em> tasks that are usually generated when creating a new case.</li>
+<li><strong>Task Generation (Contact Tracing)</strong> <code>TASK_GENERATION_CONTACT_TRACING</code>: Enables or disables the automatic generation of tasks associated with contact tracing, especially the <em>Contact Investigation</em> tasks that are usually generated when creating a new contact and the <em>Contact Follow-Up</em> tasks that are created once a day for every contact that is under follow-up.</li>
+<li><strong>Task Generation (Event Surveillance)</strong> <code>TASK_GENERATION_EVENT_SURVEILLANCE</code>: Enables or disables the automatic generation of tasks associated with event surveillance.</li>
+<li><strong>Task Generation (General)</strong> <code>TASK_GENERATION_GENERAL</code>: Enables or disables the automatic generation of tasks that aren't directly associated with one of the three other task types described above, e.g. the <em>Weekly Report Generation</em> task that asks mobile users to submit their weekly reports.</li>
+<li><strong>Campaigns</strong> <code>CAMPAIGNS</code>: The campaigns module allows collecting flexible data which can be customized using the JSON format. Currently this is heavily geared towards vaccination campaigns in Afghanistan, but will be usable in a more generic way in the future for other countries as well.</li>
+<li><strong>Area Infrastructure</strong> <code>INFRASTRUCTURE_TYPE_AREA</code>: Enables an additional infrastructure level above region that is called area by default. Currently only used in the campaigns module.</li>
+<li><strong>Case Follow-Up</strong> <code>CASE_FOLLOWUP</code>: Enables the contact follow-up module for cases as well to allow a more detailed daily documentation of symptoms.</li>
+<li><strong>Line Listing</strong> <code>LINE_LISTING</code>: Whether or not using line listing for case entry is enabled in the specified jurisdiction for the specified disease. Configurable from the UI, no database interaction needed.</li>
+<li><strong>Documents</strong> <code>DOCUMENTS</code>: Enables document storage.</li>
+<li><strong>GDPR Popup</strong> <code>GDPR_CONSENT_POPUP</code>: Enables a popup which informs new users about the General Data Protection Regulation (GDPR) of the European Union</li>
+<li><strong>Task related notifications</strong> <code>TASK_NOTIFICATIONS</code>: Enables email and SMS notifications related to tasks management</li>
+<li><strong>Notifications related to confirmed cases of event participants</strong> <code>EVENT_PARTICIPANT_CASE_CONFIRMED_NOTIFICATIONS</code>: Enables email and SMS notifications sent to surveillance officers of events when the case of an event participant is confirmed</li>
+<li><strong>Other notifications</strong> <code>OTHER_NOTIFICATIONS</code>: Enables other email and SMS notifications (other than those impacted by <code>TASK_NOTIFICATIONS</code> and <code>EVENT_PARTICIPANT_CASE_CONFIRMED_NOTIFICATIONS</code>)</li>
+</ul>
+<h2 id="proxy-settings">Proxy Settings</h2>
+<p>Some SORMAS integrations support proxy settings:
+* <strong>Patient diary interface</strong>
+* <strong>Geocoding</strong>
+* <strong>SORMAS 2 SORMAS</strong></p>
+<p>The proxy can be configured through the following system properties which can be passed as JVM arguments to the server:
+* <code>org.jboss.resteasy.jaxrs.client.proxy.host</code>
+* <code>org.jboss.resteasy.jaxrs.client.proxy.port</code>
+* <code>org.jboss.resteasy.jaxrs.client.proxy.scheme</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../SECURITY/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Security
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../SERVER_DEV_SETUP/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Development Setup
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/hzi-braunschweig/SORMAS-Project" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": 0.1}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>

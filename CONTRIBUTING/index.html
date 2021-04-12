@@ -1,0 +1,881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Contributing - SORMAS Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contributing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SORMAS Project" class="md-header__button md-logo" aria-label="SORMAS Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SORMAS Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contributing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/hzi-braunschweig/SORMAS-Project/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hzi-braunschweig/SORMAS-Project
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SORMAS Project" class="md-nav__button md-logo" aria-label="SORMAS Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    SORMAS Project
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/hzi-braunschweig/SORMAS-Project/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hzi-braunschweig/SORMAS-Project
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://sormas.org" class="md-nav__link">
+        Offical Website
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Contributing
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-an-issue" class="md-nav__link">
+    Submitting an Issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting an Issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-report" class="md-nav__link">
+    Bug Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-request" class="md-nav__link">
+    Change Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-request" class="md-nav__link">
+    Feature Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-project" class="md-nav__link">
+    Contributing to the Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-code" class="md-nav__link">
+    Contributing to the Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Contributing to the Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-contributing-guidelines" class="md-nav__link">
+    Development Contributing Guidelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEMO_APP/" class="md-nav__link">
+        Demo App
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-rest/" class="md-nav__link">
+        REST
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEVELOPMENT_ENVIRONMENT/" class="md-nav__link">
+        Development Environment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-cargoserver/" class="md-nav__link">
+        Cargo Server
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-base/doc/keycloak/" class="md-nav__link">
+        Keycloak
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sormas-keycloak-service-provider/" class="md-nav__link">
+        Keycloak Service Provider
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../I18N/" class="md-nav__link">
+        I18n
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SECURITY/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_CUSTOMIZATION/" class="md-nav__link">
+        Custimization
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_DEV_SETUP/" class="md-nav__link">
+        Development Setup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_SETUP/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SERVER_UPDATE/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOP_DISEASES/" class="md-nav__link">
+        Diseases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADDING_LICENSE/" class="md-nav__link">
+        Licensing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3RD_PARTY_ACK/" class="md-nav__link">
+        Acknowledgements
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-an-issue" class="md-nav__link">
+    Submitting an Issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting an Issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-report" class="md-nav__link">
+    Bug Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-request" class="md-nav__link">
+    Change Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-request" class="md-nav__link">
+    Feature Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-project" class="md-nav__link">
+    Contributing to the Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-code" class="md-nav__link">
+    Contributing to the Code
+  </a>
+  
+    <nav class="md-nav" aria-label="Contributing to the Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-contributing-guidelines" class="md-nav__link">
+    Development Contributing Guidelines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/hzi-braunschweig/SORMAS-Project/edit/master/docs/CONTRIBUTING.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="contributing">Contributing</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#submitting-an-issue">Submitting an Issue</a></li>
+<li><a href="#contributing-to-the-project">Contributing to the Project</a></li>
+<li><a href="#contributing-to-the-code">Contributing to the Code</a></li>
+</ul>
+<h2 id="submitting-an-issue">Submitting an Issue</h2>
+<p>Please read adhere to the following guidelines when submitting new issues. This allows us to process your request as quickly as possible. Make sure to always use the templates that are automatically provided when creating an issue.</p>
+<p>If you want to report a <strong>security issue</strong>, please follow our guideline for <a href="../SECURITY/"><em>Responsible Disclosure</em></a>.</p>
+<p><strong>Important:</strong> Whenever creating a new issue, <strong>please search the repository for similar issues first</strong> to avoid duplicates. You can do this manually or by using the search functionality in the header and limiting your results to the SORMAS repository.</p>
+<ul>
+<li><a href="#bug-report">Bug Report</a></li>
+<li><a href="#change-request">Change Request</a></li>
+<li><a href="#feature-request">Feature Request</a></li>
+</ul>
+<h3 id="bug-report">Bug Report</h3>
+<p>When submitting a bug report, providing us with as much information as possible helps us to identify the root of the problem and fix it as fast as possible. Ideally, we would need the following details:</p>
+<ul>
+<li><strong>Bug Description:</strong> A description of what exactly happened, where it happened and under which circumstances. Provide as many details as possible.</li>
+<li><strong>Steps to Reproduce:</strong> If possible, provide a step-by-step instruction on the order of actions you performed before the bug occurred. This helps us to reproduce it on our system.</li>
+<li><strong>Expected Behavior:</strong> Quickly describe what you believe should've happened instead of the error you got.</li>
+<li><strong>Screenshots:</strong> If possible, make at least one screenshot of the bug and include it in your bug report. You can do this by simply dragging-and-dropping the image file into the template you're filling out.</li>
+<li><strong>System Details:</strong> Tell us which device you were using, on which SORMAS version the error occurred and, depending on whether you were using the mobile app or the web app, your Android version or the web browser.</li>
+<li><strong>Additional Information:</strong> If there is anything else you want to add to your request, you can put it here.</li>
+</ul>
+<h3 id="change-request">Change Request</h3>
+<p>When submitting a change request or a feature request, describing the feature you would like us to add or change in detail will make sure that we have an easier time to discuss it internally and get back to you as quickly as possible.</p>
+<ul>
+<li><strong>Feature Description:</strong> Please describe the feature you would like us to change as it is in SORMAS right now so we know the subject of the issue.</li>
+<li><strong>Problem Description:</strong> Tell us why you want us to change the feature and what you believe is wrong with the way it's currently designed.</li>
+<li><strong>Proposed Change:</strong> Describe in as much detail as possible how you would like us to change the feature.</li>
+<li><strong>Possible Alternatives:</strong> If possible, provide alternative solutions in case your proposed change can not be implemented for any reason.</li>
+<li><strong>Additional Information:</strong> If there is anything else you want to add to your request, you can put it here.</li>
+</ul>
+<h3 id="feature-request">Feature Request</h3>
+<p>When submitting a change request or a feature request, describing the feature you would like us to add or change in detail will make sure that we have an easier time to discuss it internally and get back to you as quickly as possible.</p>
+<ul>
+<li><strong>Situation Description:</strong> Please describe why your proposed feature is required and how exactly SORMAS is not able to do what you want it to do right now.</li>
+<li><strong>Feature Description:</strong> Describe in as much detail as possible how your proposed feature should look like and what it should do.</li>
+<li><strong>Possible Alternatives:</strong> If possible, provide alternative solutions in case your proposed feature can not be implemented in the way you outlined it for any reason.</li>
+<li><strong>Additional Information:</strong> If there is anything else you want to add to your request, you can put it here.</li>
+</ul>
+<h2 id="contributing-to-the-project">Contributing to the Project</h2>
+<p>Even as a non-developer, there are a lot of things that you can help us with. If there is something you would like to do that you don't find instructions about here, make sure to contact us at sormas@helmholtz-hzi.de and let us know how we can assist you!</p>
+<ul>
+<li><a href="../I18N/">Translating SORMAS</a></li>
+<li><a href="../SOP_DISEASES/">Defining new diseases</a></li>
+</ul>
+<h2 id="contributing-to-the-code">Contributing to the Code</h2>
+<p>If you're interested in participating in the development of SORMAS, you can use the following guides to get started. If you have problems setting up your development environment or don't know what you can work on, don't hesitate to contact us at sormas@helmholtz-hzi.de!</p>
+<ul>
+<li><a href="../DEVELOPMENT_ENVIRONMENT/">Setting up your local environment</a></li>
+<li><a href="../ADDING_LICENSE/">Adding license headers</a></li>
+<li><a href="https://github.com/hzi-braunschweig/SORMAS-Project/wiki/Adding-a-New-Disease">How to add a new disease?</a></li>
+<li><a href="https://github.com/hzi-braunschweig/SORMAS-Project/wiki/Adding-a-New-Field-to-an-Entity">How to add a new field?</a></li>
+</ul>
+<h3 id="development-contributing-guidelines">Development Contributing Guidelines</h3>
+<ol>
+<li>Use the eclipse code formatter (Ctrl+Shift+F) and the Android Studio code formatter for the <strong>sormas-app</strong> project. To not forget this, use save actions <a href="../DEVELOPMENT_ENVIRONMENT/">for your IDE</a>.</li>
+<li>Rules for blank lines (which cannot be enforced by automatic formatting):<ul>
+<li>Use one blank line after method definition (but usually not for one liners like getters/setters or delegation).</li>
+<li>Use one blank line to separate statements within a code block from each other when you start a new logical block.</li>
+<li>Do not use blank lines after each statement.</li>
+<li>No blank line after last statement of a block, but closing } with proper intendation in the next line.</li>
+<li>No blank line between two closing }.</li>
+</ul>
+</li>
+<li>You can use <code>//@formatter:off</code> and <code>//@formatter:on</code> to encapsulate a code block where the automated formatting messes up the readability. Try to use this rarely and use proper intendation nevertheless.</li>
+<li>Rules for code comments:<ul>
+<li>Separate code and comment: Set the comment before the statement(s) you want to explain.</li>
+</ul>
+</li>
+<li>Each commit should be related to a single issue on Github and have a reference to this issue as well as a short description on what has been done in this commit:<blockquote>
+<h1 id="61-added-model-to-define-classification-apply-automatic-case-classification-whenever-a-field-value-changes">61 - added model to define classification, apply automatic case classification whenever a field value changes</h1>
+</blockquote>
+</li>
+<li>Each pull request should be related to a single issue (if possible).</li>
+</ol>
+<h3 id="sormas-product-backlog">SORMAS Product Backlog</h3>
+<p>The board <strong>Product Backlog</strong> is used to plan, refine and prioritize the tickets for the upcoming sprints.
+The sorting from top to bottom in every column reflects the priority for the product. The Product Owner is responsible to put tickets into the Backlog and keep the ticket information updated.</p>
+<p>The Product Backlog contains the following columns:
+* <strong>Backlog:</strong> Issues that have been identified by the Product Owner to be done in the next sprints. There can be a column for each Scrum Team if it fits the need.
+* <strong>Sprint n:</strong> Contain tickets picked by the Product Owner to be done in the named sprint. Text notes or separate columns are used to separate issues between Scrum Teams.
+  It gives a forecast what might come in the upcoming sprint and it is the starting point for the Sprint Planning. Every ticket the Development Team do not pick into their Sprint Backlog needs to be moved back to the Backlog column or one sprint further.
+* <strong>Done:</strong> Tickets that are closed (usually resolved within the running sprint) are moved here <strong>automatically</strong>. The sorting does not represent the priority here any more.</p>
+<h3 id="sormas-sprint-backlog">SORMAS Sprint Backlog</h3>
+<p>The board <strong>Sprint Backlog</strong> exists for each Scrum Team and is segmented into the following categories:</p>
+<ul>
+<li><strong>Backlog:</strong> Issues that have been selected by the Development Team to be done in the current sprint, but for which work has not yet started. The sorting top to bottom on this column reflects the priority given by the Product Owner at the time of the Sprint Planning.</li>
+<li><strong>In Progress:</strong> Issues that have been assigned to a contributor and for which work has started.</li>
+<li><strong>Waiting:</strong> Issues for which work has started and that have been put on hold, e.g. because action or feedback by an external contributor is required.</li>
+<li><strong>Review:</strong> Issues that have been resolved, but not been reviewed by another contributor yet. The ticket status is usually <strong>Open</strong>, but <strong>Closed</strong> is also allowed if no code change or merge is needed.</li>
+<li><strong>Testing:</strong> Issues that have been reviewed and merged to <strong>development</strong> branch to be tested and verified on a central TEST instance. The ticket status is supposed to be <strong>Closed</strong>.</li>
+<li><strong>Done:</strong> Issues that have been resolved, reviewed and satisfy the Definition of Done. The ticket status is supposed to be <strong>Closed</strong>.</li>
+</ul>
+<p>The general workflow is that whenever a contributor starts working on an issue, they <strong>assign</strong> themselves to it and manually <strong>move the issue</strong> from <strong>Backlog</strong> to <strong>In Progress</strong>.
+Transitions to <strong>Waiting</strong> and <strong>Review</strong> also need to be done manually. When the developer is done with all work (no code changes or merges needed, milestone is set), the ticket is supposed to be closed to go automatically to <strong>Testing</strong>.
+Approved tickets are supposed to be moved manually from <strong>Testing</strong> to *<em>Done</em>.</p>
+<p>The GitHub project has been configured to <strong>automatically</strong> move issues that are closed to <strong>Testing</strong> and issues that are reopened back to <strong>In Progress</strong>.</p>
+<p>The Development Team is responsible to keep the tickets up to date on this board and to assign the appropriate milestone in which the work is going to be released.</p>
+<h3 id="managing-dependencies">Managing dependencies</h3>
+<p>For managing Java libraries as dependencies, they are managed by Maven and listed in <em>sormas-base/pom.xml</em>.  The purpose of a centralized management is to have an overview of the used libraries and adjust for new versions.</p>
+<ol>
+<li><strong>Payara modules</strong>: Provided by Payara in <em>{payara-home}/glassfish/modules</em> and used in that version by other libs.</li>
+<li><strong>Domain libs</strong>: Provided in Payara domain under <em>{payara-domain}/lib</em> to be usable by deployed artifacts (ear, war). They have to be listed in <em>sormas-base/dependencies/serverlibs.pom</em>. Usually for helper libraries that several artifacts need.</li>
+<li><strong>Compile dependencies</strong>: Bundled in respective artifacts who need the dependency explicitly. Usually for dependencies singularly needed in one artifact.</li>
+<li><strong>Test libraries</strong>: Libraries used in automated tests in one or more modules.</li>
+</ol>
+<p>Due to the separate build management tool Gradle for <em>sormas-app</em>, there exists a redundant listing of compile dependencies in <em>sormas-app/app/build.gradle</em>.</p>
+<h3 id="eclipse-troubleshooting">Eclipse Troubleshooting</h3>
+<p>Unfortunatley, when using eclipse together with the Payara Tools, there are a number of deployment problems that you might run into. Examples of these include:</p>
+<ul>
+<li>ClassDefNotFoundExceptions after deploying the artifacts and logging in to the web app</li>
+<li>Error messages in eclipse telling you that the deployment failed</li>
+</ul>
+<p>There are a couple of things you can do to fix these problems:</p>
+<ul>
+<li>Do a Maven update for all projects</li>
+<li>Stop and restart the server</li>
+<li>Re-deploy the server artifacts</li>
+</ul>
+<p>If the problem occurred right after you've pulled new code from GitHub, your safest bet is probably to start with the Maven update. For most other problems, a simple re-deployment or, if necessary, server restart should suffice.</p>
+<p>When you have problems like this - <code>An internal error occurred during: "Polling news feeds".  javax/xml/bind/JAXBContext</code> - then disable setting <code>Window --&gt; Preferences --&gt; General --&gt; News --&gt; "Enable automatic news polling"</code> (may happen when running Eclipse with JDK 11).</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href=".." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../DEMO_APP/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Demo App
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/hzi-braunschweig/SORMAS-Project" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": 0.1}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>
