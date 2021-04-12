@@ -8,9 +8,9 @@ env:
 
 on:
   push:
-    branches: [ development, master, openapi-canary  ]
-  #pull_request:
-  #  branches: [ development ]
+    branches: [ development, master ]
+  pull_request:
+    branches: [ development ]
 
 jobs:
   test:
@@ -39,15 +39,16 @@ jobs:
         working-directory: ./sormas-base
         run: mvn verify -B -ntp -DskipTests
 
-      - name: commit openAPI spec
-        if: github.event_name == 'push' && github.ref == 'refs/heads/openapi-canary'
+      - name: Commit openAPI spec
+        if: github.event_name == 'push' && github.ref == 'refs/heads/development'
         run: |
             git config user.name github-actions
             git config user.email github-actions@github.com
+
             rm -rf openapi
             mkdir openapi/
             cp sormas-rest/target/swagger.json openapi
-            git status
+
             git add openapi
-            git commit -m "Update openAPI spec files"
+            git commit -m "[GitHub Actions] Update openAPI spec files"
             git push
