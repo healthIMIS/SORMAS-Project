@@ -1,8 +1,0 @@
-name: Open API
-
-env:
-  java: 11
-
-on:
-  push:
-    branches: [ openapi-canary ]
